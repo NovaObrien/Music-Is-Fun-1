@@ -20,31 +20,49 @@
         </nav>
     </header>
     <main class="container-fluid">
-        <section class="row">
+        <!-- <section class="row">
             <div class="col-12 bannerStyle">
                 <p>Music is Fun</p>
-            </div>
-            <div class="offset-8 col-4">
-                <form onsubmit="app.songsController.search(event)">
-                    <input type="text" class="form-control" name="query" placeholder="Search For Music" />
-                    <button class="btn btn-success mt-1 form-control" type="submit">
-                        Search
-                    </button>
-                </form>
-            </div>
+            </div> -->
+        <div class="col-4 mt-2">
+            <form class="d-flex" onsubmit="app.songsController.search(event)">
+                <input type="text" class="form-control" name="query" placeholder="Search For Music" />
+                <button class="btn btn-success ml-2 " type="submit">
+                    =>
+                </button>
+            </form>
+        </div>
         </section>
 
         <section class="row">
-            <div class="col-6">
+            <div class="col-4 overflow-auto">
                 <h3 class="text-center">Search Results</h3>
-                <div id="songs" class="col-12 m-0">
+                <div id="songsId" class="col-12 m-0 ">
                     <!-- template to generate -->
                 </div>
             </div>
-            <div class="col-6">
-                <h3 class="text-center">Playlist</h3>
-                <div class="col-12 m-0" id="playlist">
+            <div class="col">
+
+                <div class="row m-0  overflow-auto justify-content-center" id="playlistId">
                     <!-- template for playlist -->
+                </div>
+                <div class="row" id="activeSongId">
+                    <div class="row ">
+                        <div class="col-2">
+                            <img class="img-fluid" src="//placehold.it/200x200" alt="" />
+                        </div>
+
+                        <div class="col-5">
+
+                        </div>
+
+                        <div class="col-5">
+                            <audio controls>
+                                <source src="${this.preview}" type="">
+                            </audio>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -61,6 +79,15 @@
         integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <script src="app/main.js" type="module"></script>
 </body>
 
